@@ -1,0 +1,26 @@
+PROCEDURE FOR AIRLINE RESERVATION SYSTEM:
+1) Install Node.js application in your machine. Node Package Manager (npm) comes along with installlation of Node.
+2) Install MySQL Relational Database Management System (RDBMS) in your machine. You can use any other DBMS also.
+3) Create a folder named AIRLINE RESERVATION PROJECT and add a app.js JavaScript file inside it.
+4) Open a new terminal and type 'npm init -y' to  to set up a new npm package.A package.json file will be created.
+5) Install express using the command 'npm install express' in the terminal. A package-lock.json file will be created.
+6) To download and install "mysql" module, execute the followiing in the terminal: 'npm install mysql'.
+7) To download and install "body-parser" module, execute the followiing in the terminal: 'npm install body-parser'.
+8) To download and install "dotenv" module, execute the followiing in the terminal: 'npm install dotenv'.
+9) To download and install "nodemon" module, execute the followiing in the terminal: 'npm install nodemon'.
+10) To download and install "ejs" module, execute the followiing in the terminal: 'npm install ejs'.
+11) Now Create a form.html file and type the code as given.
+12) Create a new file named connection.js and type the following code to create a connection to the MySQL server.
+13) Now in the ap.js file, to include neccesary module, use the require() function with the name of the module. For example, require('express').
+14) now in app.js include various functions for implementing READ, UPDATE and DELETE operations and other statements as given.
+15) Create .env file and include various attributes for establishing proper connection with MySQL Database.
+16) Create a folder 'views' and add files, display.ejs and update.ejs files.
+17) Type the code as given in the respective display.ejs file. This file will be displayed when navigating to localhost:3000 in the web browser.
+18) Type the code as given in the update.ejs file, which is used to input New Passenger data for UPDATE operation.
+19) Create a style.css stylesheet to stlye the display.ejs and update.ejs files, and include externally, the styl.css file in the two ejs files.
+20) in the terminal start the Server by giving in the commmand- 'nodemon app.js'.
+21) In your Web Browser, type localhost:3000 to view the display.ejs file content.
+22) Enter the required passenger data in the form attached below 'YOUR TRAVEL' .
+23) Update the particulat Travel information as required and save it.
+24) Delete the travel information whenever neccesary.
+25) Thus Arlne Resevation System was created and CRUD operations were successfully executed.

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--THIS IS THE MAIN FILE THAT IS GOING TO BE DISPLAYED FOR CRUD OPERATION.
+     AFTER ENTER localhost:3000, THIS PAGE SHOULD BE VISIBLE. 
+     BEFORE THAT PLS START THE SERVER BY TYPING nodemon app.js in terminal-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <p class="intro">ABC AIRWAYS</p>
+        <p class="desc">PLAN YOUR TRAVEL WITH THE MOST COMFORTABLE AND LUXIROUS AIRWAYS...</p>
+        <MARQUEE><span>Get exiting discounts and coupons in ABC AIRLINES! .                   NEW! : NOW 2<sup>nd</sup> class fare reduced by 20% for all trevels! </span></MARQUEE>
+    </div>
+    
+    <p class="tabledesc">YOUR TRAVEL</p>
+    <table class="displayTable">
+        <tr><th>Ticket_Id</th>
+        <th>Name</th>
+        <th>AGE</th>
+        <th>Departure</th>
+        <th>Tentative Departure Date</th>
+        <th>Travel Class</th>
+        <th>Destination</th>
+        <th>No Of Passengers</th>
+        <th>Change Ticket Details </th>
+        <th>Remove Journey</th>
+   </tr>
+
+        <% if(test.length > 0){ %>
+ <% for (var i=0 ; i<test.length; i++){ %>
+   <tr>
+    <td> <%- test[i].ticketId %></td>
+    <td> <%- test[i].Name %></td>
+    <td> <%- test[i].Age %></td>
+    <td> <%- test[i].Departure %></td>
+    <td> <%- test[i].Departure_date %></td>
+    <td> <%- test[i].class %></td>
+    <td> <%- test[i].destination %></td>
+    <td> <%- test[i].No_of_passengers %></td>
+    <td><button class="updatebtn"><a href="/update?id=<%- test[i].ticketId %>" target="_blank" >UPDATE</a></button></td>
+    <td><button class="removebtn"><a href="/delete?id=<%- test[i].ticketId %>" target="_blank">DELETE</a></button></td>
+   </tr>
+<% } %>
+       <% } else { %>
+<h1>NO TRAVEL BOOKED YET! !</h1>
+      <% } %>
+    </table><br><br><br><br><br><br><br>
+    <div class="container">
+        <legend >ENTER PASSENGER DETAILS</legend><br>
+        <p>To avoid ERROR Please enter all </p>
+        <form action="/" method="post"  target="_self">
+            <label for ="name">Full Name:</label><br>
+            <input type="text" placeholder="Name" name="name" required><br><br>
+            <label for = "age">Age: </label><br>
+            <input type="number" placeholder = 20 name = "age" min="18" required><br><br>
+            <label for="departure">Departure: </label><br>
+            <select  name="departure" required>
+                <option>Chennai International Airport</option>
+                <option>Kempegowda International Airport, Bangalore</option>
+                <option>Indira Gandhi International Airport, Delhi</option>
+                <option>Goa Airport</option>
+                <option>Mumbai International Airport</option>
+            </select><br><br>
+            <label for = "departure_Date">Departure Date: </label><br>
+            <input type = "date" name="departure_Date" required><br><br>
+            <label for = "class"> Travel Class: </label>
+            <select name="class" required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select><br><br>
+            <label for="destination">Destination: </label><br>
+            <select  name="destination" required>
+                <option>Chennai International Airport</option>
+                <option>Kempegowda International Airport, Bangalore</option>
+                <option>Indira Gandhi International Airport, Delhi</option>
+                <option>Goa Airport</option>
+                <option>Chatrapati Shivaji Maharaj International Airport, Mumbai</option>
+            </select><br><br>
+            <label for="passengersCount">Number of Tickets: </label><br>
+            <input type="number" min="1" max='32' name="passengersCount" required><br><br>
+            
+            <input type="submit" placeholder="Submit" required>
+        </form>
+    <p class="note">Your Ticket will be sent to you in few days...</p>
+    </div>
+<br><br><br><br><br><br><br>
+</body>
+</html>
